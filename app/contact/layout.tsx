@@ -1,7 +1,9 @@
-import React from "react";
+interface Props {
+  children: React.ReactNode;
+}
 
-const ContactLayout = () => {
-  return <div>ContactLayout</div>;
+const ContactLayout = ({ children }: Props) => {
+  return <div>{children}</div>;
 };
 
 export default ContactLayout;

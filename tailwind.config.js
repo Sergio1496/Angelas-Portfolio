@@ -43,11 +43,14 @@ module.exports = {
       colors: {
         background: "#1F1D36",
         tarjetas: "#3F3351",
-        textos: "#864879",
+        textos: "#AD7390",
         textos2: "#E9A6A6",
         backgroundMenu: "#EBD5E0",
       },
     },
   },
-  plugins: [require("prettier-plugin-tailwindcss")],
+  plugins: [
+    require("prettier-plugin-tailwindcss"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 };

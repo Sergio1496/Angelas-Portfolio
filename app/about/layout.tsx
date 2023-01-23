@@ -3,7 +3,7 @@ interface Props {
 }
 
 const AboutLayout = ({ children }: Props) => {
-  return <div>{children}</div>;
+  return <div className="flex-grow">{children}</div>;
 };
 
 export default AboutLayout;
