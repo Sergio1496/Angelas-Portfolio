@@ -34,6 +34,9 @@ module.exports = {
           lineHeight: "3.5rem",
         },
       ],
+      "6xl": "3.75rem",
+      "7xl": "4.5rem",
+      "8xl": "6rem",
     },
     fontFamily: {
       titulo: "var(--titulo-font)",

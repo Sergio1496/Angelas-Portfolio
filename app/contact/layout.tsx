@@ -3,7 +3,7 @@ interface Props {
 }
 
 const ContactLayout = ({ children }: Props) => {
-  return <div>{children}</div>;
+  return <div className=" w-screen flex-grow">{children}</div>;
 };
 
 export default ContactLayout;

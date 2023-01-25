@@ -19,10 +19,24 @@ export default function Navbar() {
         </div>
         <div className="hidden items-center md:block">
           <Link
-            href={pathname === "/about" ? "/works" : "/about"}
+            href={
+              pathname === "/about"
+                ? "/works"
+                : pathname === "/works"
+                ? "/about"
+                : pathname === "/contact"
+                ? "/works"
+                : "/works"
+            }
             className="px-10 font-titulo text-3xl font-semibold"
           >
-            {pathname === "/about" ? "Works" : "About"}
+            {pathname === "/about"
+              ? "Works"
+              : pathname === "/works"
+              ? "About"
+              : pathname === "/contact"
+              ? "Works"
+              : "Works"}
           </Link>
         </div>
         <div className="flex ">
@@ -39,9 +53,9 @@ export default function Navbar() {
             <li>
               <Link
                 className="ml-8 hidden rounded-md px-10 py-2 font-titulo text-3xl font-semibold md:block"
-                href="/contact"
+                href={pathname === "/contact" ? "/about" : "/contact"}
               >
-                Contact
+                {pathname === "/contact" ? "About" : "Contact"}
               </Link>
             </li>
             {/* Estos enlaces van en desktop */}
@@ -59,7 +73,7 @@ export default function Navbar() {
       {/* Aqui empieza el menú desplegable con un fixed para que se vea en toda la pantalla por encima del navbar "cuidado con los md:hidden para esconder el menu en desktop" */}
       <div
         className={`${
-          open ? "flex" : "hidden"
+          open ? "z-50 flex" : "hidden"
         } z-90 fixed top-0 h-screen w-screen flex-col items-center justify-between bg-backgroundMenu md:hidden`}
       >
         <div className="flex w-screen flex-row justify-between px-10 py-10">
@@ -110,9 +124,12 @@ export default function Navbar() {
         <div className="flex w-screen flex-row items-end justify-between px-10 py-5 ">
           <div className="flex flex-col">
             <div className="gap-0 font-texto text-sm font-medium">email</div>
-            <div className="font-titulo text-xl font-semibold">
+            <Link
+              className="font-titulo text-xl font-semibold"
+              href="mailto:hello@angelasroom.com"
+            >
               hello@angelasroom.com
-            </div>
+            </Link>
           </div>
           <div>
             <Image src="/be.svg" width={40} height={40} alt="be" />

@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className={`${italiana.variable} ${openSans.variable}`}>
       <head />
 
-      <body className="flex h-screen flex-col scrollbar-thin scrollbar-track-transparent scrollbar-thumb-textos scrollbar-thumb-rounded-md">
+      <body className="flex h-screen flex-col bg-white scrollbar-thin scrollbar-track-transparent scrollbar-thumb-textos scrollbar-thumb-rounded-md">
         <Navbar />
         {children}
         <Footer />
